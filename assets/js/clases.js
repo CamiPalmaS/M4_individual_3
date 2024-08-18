@@ -48,6 +48,41 @@ export class Proveedor {
     }
 }
 
+//nueva clase extendida TipoProveedor
+export class TipoProveedor extends Proveedor {
+    #pais;
+    #esInternacional;
+
+    constructor(nombre, articulo, precio, pais, esInternacional) {
+        //llamamos al constructor padre con super
+        super(nombre, articulo, precio);
+        this.#pais = pais;
+        this.#esInternacional = esInternacional;
+    }
+
+    getPais() {
+        return this.#pais;
+    }
+    setPais(pais) {
+        this.#pais = pais;
+    }
+
+    getEsInternacional() {
+        return this.#esInternacional;
+    }
+    setEsInternacional(esInternacional) {
+        this.#esInternacional = esInternacional;
+    }
+
+    //se sobrescribe el método getInfoProveedor() 
+    getInfoProveedor() {
+        const infoBase = super.getInfoProveedor(); //llamamos al metodo original
+        const tipoProveedor = this.#esInternacional ? "Internacional" : "Nacional";//habra que chequear si es true o false
+        return `${infoBase}, País: ${this.#pais}, Tipo de Proveedor: ${tipoProveedor}`;
+    }
+}
+
+
 //Clase articulo
 export class Articulo {
     #name;

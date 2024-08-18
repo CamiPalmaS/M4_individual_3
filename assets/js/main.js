@@ -1,5 +1,5 @@
 //para importar clases
-import { Proveedor, Articulo } from "./clases.js";
+import { Proveedor, Articulo, TipoProveedor } from "./clases.js";
 
 //datos inventados para probar funcionamiento codigo
 const verduras = new Articulo("Paltas", 50000);
