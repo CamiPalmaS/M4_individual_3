@@ -10,6 +10,9 @@ console.log(verduras.mostrarInfoArticulo());
 console.log(verduleria.mostrarInfoProveedor());
 //termina aqui
 
+//arreglo para enviar info proveedores
+const listaProveedores = [];
+
 //funcion para registrar proveedor y articulo
 document.getElementById('formProveedor').addEventListener('submit', (event) => {
     event.preventDefault();
@@ -47,6 +50,7 @@ document.getElementById('formProveedor').addEventListener('submit', (event) => {
     const nuevoArticulo = new Articulo(nombreArticulo, precio);
     const nuevoProveedor = new Proveedor(nombreProveedor, nuevoArticulo, emailArticulo, telefonoArticulo);
 
+    listaProveedores.push(nuevoProveedor);
     console.log(nuevoArticulo.mostrarInfoArticulo());
     console.log(nuevoProveedor.mostrarInfoProveedor());
 
