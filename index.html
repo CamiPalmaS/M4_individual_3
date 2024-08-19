@@ -41,6 +41,15 @@
                     <label for="precio">Precio del Artículo:</label>
                     <input type="number" class="form-control" id="precio" required>
                 </div>
+                <div class="form-group">
+                    <label for="pais">País:</label>
+                    <input type="text" class="form-control" id="pais" required>
+                </div>
+                <div class="form-group form-check">
+                    <!--funcion onchange para mostrar siguiente item si se clickea-->
+                    <input type="checkbox" class="form-check-input" id="internacional">
+                    <label class="form-check-label" for="internacional">¿Es un proveedor internacional?</label>
+                </div>
                 <p id="errorFormulario"></p>
                 <button type="submit" class="btn btn-success">Agregar Proveedor</button>
             </form>
