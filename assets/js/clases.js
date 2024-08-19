@@ -53,9 +53,9 @@ export class TipoProveedor extends Proveedor {
     #pais;
     #esInternacional;
 
-    constructor(nombre, articulo, precio, pais, esInternacional) {
+    constructor(nombre, articulo, email, telefono, pais, esInternacional) {
         //llamamos al constructor padre con super
-        super(nombre, articulo, precio);
+        super(nombre, articulo, email, telefono);
         this.#pais = pais;
         this.#esInternacional = esInternacional;
     }
